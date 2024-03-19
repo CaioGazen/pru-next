@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
+import logo from "../../public/pru-high-resolution-logo.png";
 import "./globals.css";
+import "./normalize.css";
+import "./style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {" "}
+        <nav className="navbar">
+          <div className="nav-center">
+            <div className="nav-header">
+              <a href="./index.html" className="nav-logo">
+                <Image src={logo} alt="simple starter" />
+              </a>
+              <button type="button" className="btn nav-btn">
+                <i className="fas fa-align-justify"></i>
+              </button>
+            </div>
+            <div className="nav-links">
+              <a href="./" className="nav-link">
+                home
+              </a>
+              <a href="./compra" className="nav-link">
+                Finalizar Compra
+              </a>
+              <div className="nav-link contact-btn">
+                <a href="./login" className="btn">
+                  login
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
