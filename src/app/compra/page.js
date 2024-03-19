@@ -38,7 +38,7 @@ export default function compra() {
                 justifyContent: "space-around",
               }}
             >
-              price : R$ 15,00 | name : Clóvis
+              price : R$ 20,00 | name : Clóvis
             </p>
           </a>
 
