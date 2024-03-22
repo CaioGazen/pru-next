@@ -1,14 +1,15 @@
 # File: .github/workflows/publish.yml
 #teste?
 name: publish-to-github-pages
-#on:
-#  push:
-#    branches:
-#      - master
 
 on:
-  workflow_dispatch:
-  
+  push:
+    branches:
+      - master
+
+#on:
+#  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
