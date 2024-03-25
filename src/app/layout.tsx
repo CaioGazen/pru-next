@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {" "}
         <div className="h-32"></div>
-        <div className="fixed top-0 start-0 z-50 flex flex-row h-24 bg-slate-400 shadow-2xl ">
+        <div className="fixed top-0 start-0 z-50 flex flex-row h-24 w-full bg-slate-400 shadow-2xl ">
           <div className="basis-1/12">
             <a href="./">
               <Image
