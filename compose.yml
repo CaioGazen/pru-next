@@ -10,16 +10,44 @@ services:
     volumes:
       - ./pru-next/src:/app/src
       - ./pru-next/public:/app/public
+
     restart: always
     ports:
       - 3000:3000
     networks:
-      - my_network
+      - network
 
-  # Add more containers below (nginx, postgres, etc.)
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    env_file:
+      - .env
 
+    ports:
+      - ${DB_PORT}:5432
+
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+    networks:
+      - network
+
+  pgadmin4:
+    container_name: pgadmin
+    image: dpage/pgadmin4:latest
+    env_file:
+      - .env
+
+    ports:
+      - "8080:80"
+
+    networks:
+      - network
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
+volumes:
+  pg-data:
+
 networks:
-  my_network:
+  network:
     driver: bridge
