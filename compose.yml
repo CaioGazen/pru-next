@@ -10,6 +10,7 @@ services:
     volumes:
       - ./pru-next/src:/app/src
       - ./pru-next/public:/app/public
+      - ./pru-next:/app
 
     restart: always
     ports:
