@@ -364,10 +364,11 @@ ul {
 .pigeon {
   display: block;
 }
-.pigeon img {
-  height: 15rem;
+.pigeon-img {
+  width: 15rem;
   border-radius: var(--borderRadius);
   margin-bottom: 1rem;
+  objectfit: contain;
 }
 
 .pigeon h5 {
