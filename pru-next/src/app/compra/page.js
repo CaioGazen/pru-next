@@ -19,9 +19,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Image from "next/image";
-import simple_pigeon from "/public/pru.jpg";
-import brown from "../../../public/brown.webp";
-import black from "../../../public/black.webp";
 
 export default function compra() {
   return (
