@@ -1,8 +1,4 @@
 import Image from "next/image";
-import simple_pigeon from "../../public/pru.jpg";
-import brown from "../../public/brown.webp";
-import black from "../../public/black.webp";
-import white from "../../public/white.jpg";
 import { GiShoppingCart } from "react-icons/gi";
 import { before } from "node:test";
 import PigeonList from "@/components/PigeonList";

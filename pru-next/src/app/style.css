@@ -364,7 +364,7 @@ ul {
 .pigeon {
   display: block;
 }
-.pigeon-img {
+.pigeon img {
   width: 15rem;
   border-radius: var(--borderRadius);
   margin-bottom: 1rem;
