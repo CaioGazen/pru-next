@@ -47,6 +47,12 @@ export default function RootLayout({
             >
               Finalizar Compra
             </a>
+            <a
+              href="./add-pigeon"
+              className="px-4 py-2 align-middle w-auto h-auto shadow-2xl rounded-3xl bg-slate-300 hover:bg-black hover:text-white hover:rounded-sm transition-all duration-300 ease-linear"
+            >
+              Adicionar Pombo
+            </a>
           </div>
           <div className="basis-1/12 flex justify-center my-auto mx-auto">
             <a
