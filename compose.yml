@@ -29,7 +29,7 @@ services:
 
     volumes:
       - pg-data:/var/lib/postgresql/data
-
+      - ./dataset:/docker-entrypoint-initdb.d
     networks:
       - network
 
