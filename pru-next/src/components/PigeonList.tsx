@@ -19,7 +19,7 @@ export default function PigeonList() {
   return (
     <div className="pigeons-list">
       {pigeons.map((pigeon) => (
-        <a
+        <div
           key={pigeon.id}
           href={`/pigeon/${pigeon.id}`}
           className="pigeon border p-4 rounded-sm shadow"
@@ -39,7 +39,7 @@ export default function PigeonList() {
               <GiShoppingCart />
             </a>
           </p>
-        </a>
+        </div>
       ))}
     </div>
   );
