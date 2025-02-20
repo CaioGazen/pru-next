@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { GiShoppingCart } from "react-icons/gi";
-import { before } from "node:test";
 import PigeonList from "@/components/PigeonList";
 
 export default function Home() {
@@ -26,9 +23,7 @@ export default function Home() {
               <a href="./tag-template.html">white</a>
             </div>
           </div>
-          <div className="pigeons-list">
-            <PigeonList />
-          </div>
+          <PigeonList />
         </section>
       </main>
     </>
