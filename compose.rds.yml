@@ -1,0 +1,53 @@
+services:
+  next-app:
+    container_name: pru-next
+    build:
+      context: ./pru-next
+      dockerfile: dev.Dockerfile
+
+    env_file:
+      - .env
+    volumes:
+      - ./pru-next/src:/app/src
+      - ./pru-next/public:/app/public
+      - ./pru-next:/app
+
+    restart: always
+    ports:
+      - 3000:80
+    networks:
+      - network
+
+  # postgres:
+  #   container_name: postgres
+  #   image: postgres:alpine
+  #   env_file:
+  #     - .env
+  #
+  #   ports:
+  #     - ${DB_PORT}:5432
+  #
+  #   volumes:
+  #     - pg-data:/var/lib/postgresql/data
+  #     - ./dataset:/docker-entrypoint-initdb.d
+  #   networks:
+  #     - network
+
+  pgadmin4:
+    container_name: pgadmin
+    image: dpage/pgadmin4:latest
+    env_file:
+      - .env
+
+    ports:
+      - 8080:8080
+
+    networks:
+      - network
+
+# volumes:
+#   pg-data:
+
+networks:
+  network:
+    driver: bridge
